@@ -11,20 +11,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 /**
  *
  * @author revoniuk
  */
-public class FXMLDocumentController implements Initializable {
+public class LoginController implements Initializable {
     
-    @FXML
-    private Label label;
+    @FXML private Label label;
+    @FXML private TextArea textAreaMain;
+    
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        textAreaMain.setText(textAreaMain.getText() + "I've been clicked!");
     }
     
     @Override
